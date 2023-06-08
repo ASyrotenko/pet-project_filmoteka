@@ -1,16 +1,13 @@
 {
   "files": {
-    "main.css": "/pet-project_filmoteka/static/css/main.073c9b0a.css",
-    "main.js": "/pet-project_filmoteka/static/js/main.2b4f7915.js",
-    "static/js/787.b976ea9a.chunk.js": "/pet-project_filmoteka/static/js/787.b976ea9a.chunk.js",
-    "static/media/logo.svg": "/pet-project_filmoteka/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.css": "/pet-project_filmoteka/static/css/main.e6c13ad2.css",
+    "main.js": "/pet-project_filmoteka/static/js/main.566d496f.js",
     "index.html": "/pet-project_filmoteka/index.html",
-    "main.073c9b0a.css.map": "/pet-project_filmoteka/static/css/main.073c9b0a.css.map",
-    "main.2b4f7915.js.map": "/pet-project_filmoteka/static/js/main.2b4f7915.js.map",
-    "787.b976ea9a.chunk.js.map": "/pet-project_filmoteka/static/js/787.b976ea9a.chunk.js.map"
+    "main.e6c13ad2.css.map": "/pet-project_filmoteka/static/css/main.e6c13ad2.css.map",
+    "main.566d496f.js.map": "/pet-project_filmoteka/static/js/main.566d496f.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.2b4f7915.js"
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.566d496f.js"
   ]
 }
