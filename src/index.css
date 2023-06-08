@@ -1,5 +1,29 @@
 @import-normalize;
 
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto/Regular/Roboto-Regular.eot");
+  src: local("Montserrat Medium"), local("Montserrat-Medium"),
+    url("./fonts/Roboto/Regular/Roboto-Regular.eot") format("embedded-opentype"),
+    url("./fonts/Roboto/Regular/Roboto-Regular.woff2") format("woff2"),
+    url("./fonts/Roboto/Regular/Roboto-Regular.woff") format("woff"),
+    url("./fonts/Roboto/Regular/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto/Medium/Roboto-Medium.eot");
+  src: local("Montserrat Medium"), local("Montserrat-Medium"),
+    url("./fonts/Roboto/Medium/Roboto-Medium.eot") format("embedded-opentype"),
+    url("./fonts/Roboto/Medium/Roboto-Medium.woff2") format("woff2"),
+    url("./fonts/Roboto/Medium/Roboto-Medium.woff") format("woff"),
+    url("./fonts/Roboto/Medium/Roboto-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: medium;
+}
+
 *,
 *::before,
 *::after {
@@ -47,14 +71,9 @@ button {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
 }
