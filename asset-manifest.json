@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/pet-project_filmoteka/static/css/main.4b94e2af.css",
-    "main.js": "/pet-project_filmoteka/static/js/main.b5e731e9.js",
-    "static/js/989.d74a3dcd.chunk.js": "/pet-project_filmoteka/static/js/989.d74a3dcd.chunk.js",
+    "main.js": "/pet-project_filmoteka/static/js/main.e52d0267.js",
+    "static/js/50.99b9fb22.chunk.js": "/pet-project_filmoteka/static/js/50.99b9fb22.chunk.js",
     "static/js/680.b029603a.chunk.js": "/pet-project_filmoteka/static/js/680.b029603a.chunk.js",
     "static/js/401.7e9e4e6d.chunk.js": "/pet-project_filmoteka/static/js/401.7e9e4e6d.chunk.js",
     "static/media/Roboto-Medium.eot": "/pet-project_filmoteka/static/media/Roboto-Medium.f9f0c87146a33023da7e.eot",
@@ -21,14 +21,15 @@
     "static/media/header-background-home-page-mobile.jpg": "/pet-project_filmoteka/static/media/header-background-home-page-mobile.17afbc7886d42620ecca.jpg",
     "static/media/logo.svg": "/pet-project_filmoteka/static/media/logo.b04272a59e78e48d8f07fa4fb3a3e182.svg",
     "index.html": "/pet-project_filmoteka/index.html",
+    "static/media/search.svg": "/pet-project_filmoteka/static/media/search.f4b78f051efdf9e1c6df1223012ab00f.svg",
     "main.4b94e2af.css.map": "/pet-project_filmoteka/static/css/main.4b94e2af.css.map",
-    "main.b5e731e9.js.map": "/pet-project_filmoteka/static/js/main.b5e731e9.js.map",
-    "989.d74a3dcd.chunk.js.map": "/pet-project_filmoteka/static/js/989.d74a3dcd.chunk.js.map",
+    "main.e52d0267.js.map": "/pet-project_filmoteka/static/js/main.e52d0267.js.map",
+    "50.99b9fb22.chunk.js.map": "/pet-project_filmoteka/static/js/50.99b9fb22.chunk.js.map",
     "680.b029603a.chunk.js.map": "/pet-project_filmoteka/static/js/680.b029603a.chunk.js.map",
     "401.7e9e4e6d.chunk.js.map": "/pet-project_filmoteka/static/js/401.7e9e4e6d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4b94e2af.css",
-    "static/js/main.b5e731e9.js"
+    "static/js/main.e52d0267.js"
   ]
 }
