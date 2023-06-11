@@ -4,7 +4,7 @@ const HeaderAuth = ({ screenWidth }) => {
   return (
     <List>
       <Item>Sign In</Item>
-      {screenWidth >= 420 && <Slash>/</Slash>}
+      {screenWidth > 420 && <Slash>/</Slash>}
       <Item>Sign Up</Item>
     </List>
   );

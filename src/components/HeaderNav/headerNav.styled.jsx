@@ -4,9 +4,10 @@ import { NavLink } from "react-router-dom";
 const Nav = styled.nav``;
 
 const List = styled.ul`
+  display: flex;
+  gap: 40px;
   @media screen and (max-width: ${({ theme }) =>
-      theme.breakpoints.burgerMenu.width}) {
-    display: flex;
+      theme.breakpoints.burgerMenu.width}px) {
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -20,9 +21,10 @@ const Item = styled.li`
   transition: color ${({ theme }) => theme.transition.duration}
     ${({ theme }) => theme.transition.timingFunction};
 
-  &:hover,
-  &:focus {
-    color: ${({ theme }) => theme.colors.headerTextHover};
+  @media (hover: hover) {
+    &:hover {
+      color: ${({ theme }) => theme.colors.headerTextHover};
+    }
   }
 `;
 
@@ -35,25 +37,27 @@ const Item = styled.li`
 //   }
 
 const LinkNav = styled(NavLink)`
-  padding: 4px 0;
+  position: relative;
+  padding: 10px 0;
 
   @media screen and (min-width: ${({ theme }) =>
-      theme.breakpoints.tablet.width}) {
-    padding: 10px 0;
+      theme.breakpoints.burgerMenu.width + 1}px) {
+    padding: 4px 0;
   }
 
-  &.active {
-    position: relative;
+  @media screen and (min-width: ${({ theme }) =>
+      theme.breakpoints.tablet.width}px) {
+    padding: 10px 0;
   }
 
   &::after {
     content: "";
     position: absolute;
+    bottom: 0;
+    left: 0;
     display: block;
     width: 100%;
     height: 3px;
-    bottom: 0;
-    left: 0;
     background-color: ${({ theme }) => theme.colors.headerTextHover};
     transform: scaleX(0);
     transition: transform ${({ theme }) => theme.transition.duration}

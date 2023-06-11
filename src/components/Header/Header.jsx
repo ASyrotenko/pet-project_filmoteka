@@ -1,12 +1,15 @@
 import { useLocation } from "react-router-dom";
 import { useState } from "react";
 
+import { theme } from "../../theme/theme";
+
 import useWindowSize from "../../hooks/useWindowSize";
-// import HeaderWrap from "../HeaderWrap/HeaderWrap";
 import Container from "../Container/Container";
 import BurgerButton from "../BurgerButton/BurgerButton";
 import HeaderNav from "../HeaderNav/HeaderNav";
 import HeaderAuth from "../HeaderAuth/HeaderAuth";
+import HeaderSearch from "../HeaderSearch/HeaderSearch";
+import HeaderGrupeBtn from "../HeaderGrupeBtn/HeaderGrupeBtn";
 import {
   HeaderStyles,
   HeaderWrap,
@@ -20,15 +23,19 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [screenWidth] = useWindowSize();
 
+  const onSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <HeaderStyles pathname={pathname}>
       <Container>
         <HeaderWrap>
           <HeaderLogoLink to="/" onClick={() => setIsOpen(false)}>
             <HeaderLogoIcon />
-            {screenWidth >= 768 && "Filmoteka"}
+            {screenWidth >= theme.breakpoints.logoText.width && "Filmoteka"}
           </HeaderLogoLink>
-          {screenWidth <= 420 && (
+          {screenWidth <= theme.breakpoints.burgerMenu.width && (
             <BurgerButton isOpen={isOpen} setIsOpen={setIsOpen} />
           )}
           <HeaderMenu isOpen={isOpen}>
@@ -36,6 +43,11 @@ const Header = () => {
             <HeaderAuth screenWidth={screenWidth} />
           </HeaderMenu>
         </HeaderWrap>
+        {pathname === "/library" ? (
+          <HeaderGrupeBtn />
+        ) : (
+          <HeaderSearch onSubmit={onSubmit} />
+        )}
       </Container>
     </HeaderStyles>
   );

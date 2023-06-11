@@ -13,8 +13,8 @@ const HeaderStyles = styled.header`
   padding-bottom: 92px;
   height: 230px;
   background-color: ${({ theme }) => theme.colors.headerBackground};
-  background-image: url(${(props) =>
-    props.pathname === "/library"
+  background-image: url(${({ pathname }) =>
+    pathname === "/library"
       ? libraryPageBackgroundMobile
       : homePageBackgroundMobile});
   background-repeat: no-repeat;
@@ -22,30 +22,30 @@ const HeaderStyles = styled.header`
   background-size: cover;
 
   @media screen and (min-width: ${({ theme }) =>
-      theme.breakpoints.mobile.width}) {
-    background-image: url(${(props) =>
-      props.pathname === "/library"
+      theme.breakpoints.mobile.width}px) {
+    background-image: url(${({ pathname }) =>
+      pathname === "/library"
         ? libraryPageBackgroundTablet
         : homePageBackgroundMobile});
   }
 
   @media screen and (min-width: ${({ theme }) =>
-      theme.breakpoints.tablet.width}) {
+      theme.breakpoints.tablet.width}px) {
     padding-top: 33px;
     padding-bottom: 88px;
     height: 216px;
-    background-image: url(${(props) =>
-      props.pathname === "/library"
+    background-image: url(${({ pathname }) =>
+      pathname === "/library"
         ? libraryPageBackgroundDesktop
         : homePageBackgroundTablet});
   }
 
   @media screen and (min-width: ${({ theme }) =>
-      theme.breakpoints.desktop.width}) {
+      theme.breakpoints.desktop.width}px) {
     padding-top: 45px;
     padding-bottom: 80px;
-    background-image: url(${(props) =>
-      props.pathname === "/library"
+    background-image: url(${({ pathname }) =>
+      pathname === "/library"
         ? libraryPageBackgroundDesktop
         : homePageBackgroundDesktop});
   }
@@ -55,6 +55,12 @@ const HeaderWrap = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 60px;
+
+  @media screen and (min-width: ${({ theme }) =>
+      theme.breakpoints.tablet.width}px) {
+    margin-bottom: 40px;
+  }
 `;
 
 const HeaderLogoLink = styled(Link)`
@@ -64,15 +70,16 @@ const HeaderLogoLink = styled(Link)`
   transition: color ${({ theme }) => theme.transition.duration}
     ${({ theme }) => theme.transition.timingFunction};
 
-  &:hover {
-    color: ${({ theme }) => theme.colors.headerTextHover};
-  }
-
   @media screen and (min-width: ${({ theme }) =>
-      theme.breakpoints.tablet.width}) {
+    theme.breakpoints.mobile.width}px) {
     font-size: 30px;
     line-height: 1.17;
   }
+
+  @media (hover: hover) {
+    &:hover {
+      color: ${({ theme }) => theme.colors.headerTextHover};
+    }
 `;
 
 const HeaderLogoIcon = styled(Logo)`
@@ -80,27 +87,28 @@ const HeaderLogoIcon = styled(Logo)`
   stroke: currentColor;
 
   @media screen and (min-width: ${({ theme }) =>
-      theme.breakpoints.tablet.width}) {
+      theme.breakpoints.mobile.width}px) {
     margin-right: 8px;
   }
 
   @media screen and (min-width: ${({ theme }) =>
-      theme.breakpoints.desktop.width}) {
+      theme.breakpoints.desktop.width}px) {
     margin-right: 10px;
   }
 `;
 
 const HeaderMenu = styled.div`
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  z-index: 1;
 
   @media screen and (max-width: ${({ theme }) =>
-      theme.breakpoints.burgerMenu.width}) {
+      theme.breakpoints.burgerMenu.width}px) {
     position: absolute;
     top: 0;
     left: 0;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
     height: 100vh;
     background-color: ${({ theme }) => theme.colors.headerBurgerMenuBackground};

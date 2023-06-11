@@ -3,21 +3,21 @@ import styled from "styled-components";
 const Wrapper = styled.div`
   margin: 0 auto;
 
-  padding: 0 ${({ theme }) => theme.breakpoints.mobile.padding};
+  padding: 0 ${({ theme }) => theme.breakpoints.mobile.padding}px;
 
   @media screen and (max-width: 767px) {
-    min-width: ${({ theme }) => theme.breakpoints.mobile.width};
+    min-width: ${({ theme }) => theme.breakpoints.mobile.width}px;
   }
 
   @media screen and (min-width: ${({ theme }) =>
-      theme.breakpoints.tablet.width}) {
-    width: ${({ theme }) => theme.breakpoints.tablet.width};
-    padding: 0 ${({ theme }) => theme.breakpoints.tablet.padding};
+      theme.breakpoints.tablet.width}px) {
+    width: ${({ theme }) => theme.breakpoints.tablet.width}px;
+    padding: 0 ${({ theme }) => theme.breakpoints.tablet.padding}px;
   }
 
   @media screen and (min-width: ${({ theme }) =>
-      theme.breakpoints.desktop.width}) {
-    width: ${({ theme }) => theme.breakpoints.desktop.width};
+      theme.breakpoints.desktop.width}px) {
+    width: ${({ theme }) => theme.breakpoints.desktop.width}px;
   }
 
   outline: 1px solid tomato;

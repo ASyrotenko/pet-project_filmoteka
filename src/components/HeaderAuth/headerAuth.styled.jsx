@@ -2,12 +2,23 @@ import styled from "styled-components";
 
 const List = styled.ul`
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+
   align-items: center;
-  margin-top: 20px;
+
+  @media screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.burgerMenu.width}px) {
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  @media screen and (min-width: ${({ theme }) =>
+      theme.breakpoints.burgerMenu.width + 1}px) {
+    margin-left: 40px;
+  }
 `;
 const Item = styled.li`
+  padding: 10px 0;
   cursor: pointer;
   line-height: 1.17;
   text-transform: uppercase;
@@ -15,9 +26,19 @@ const Item = styled.li`
   transition: color ${({ theme }) => theme.transition.duration}
     ${({ theme }) => theme.transition.timingFunction};
 
-  &:hover,
-  &:focus {
-    color: ${({ theme }) => theme.colors.headerTextHover};
+  @media (hover: hover) {
+    &:hover {
+      color: ${({ theme }) => theme.colors.headerTextHover};
+    }
+
+  @media screen and (min-width: ${({ theme }) =>
+    theme.breakpoints.burgerMenu.width + 1}px) {
+    padding: 4px 0;
+  }
+
+  @media screen and (min-width: ${({ theme }) =>
+    theme.breakpoints.tablet.width}px) {
+    padding: 10px 0;
   }
 `;
 

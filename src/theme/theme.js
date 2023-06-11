@@ -1,9 +1,10 @@
 export const theme = {
   breakpoints: {
-    mobile: { width: "321px", padding: "20px" },
-    burgerMenu: { width: "420px" },
-    tablet: { width: "768px", padding: "32px" },
-    desktop: { width: "1280px", padding: "32px" },
+    mobile: { width: 320, padding: 20 },
+    burgerMenu: { width: 420 },
+    logoText: { width: 580 },
+    tablet: { width: 768, padding: 32 },
+    desktop: { width: 1280, padding: 32 },
   },
   space: [
     0, //0
@@ -36,17 +37,14 @@ export const theme = {
     headerTextHover: "#FF001B",
     headerBackground: "#0000008F",
     headerBurgerMenuBackground: "#202124",
-    yellow: "#FFC107",
-    white: "#FDF7F2",
-    grey: "#888888",
-    black: "#111111",
-    blue: "#54ADFF",
-    lightBlue: "#CCE4FB",
-    green: "#00C3AD",
-    red: "#F43F5E",
-    gradientBlue: "linear-gradient(290.46deg, #419EF1 0%, #9BD0FF 107.89%)",
+    headerInputBorder: "#FFFFFF",
+    headerButtonBorder: "#FFFFFF",
+    buttonBackground: "transparent",
+    buttonActiveBorder: "#FF6B01",
+    buttonActiveBackground: "#FF6B01",
   },
   boxShadows: {
+    buttonActive: "0px 8px 43px rgba(255, 107, 1, 0.6)",
     main: "3px 8px 14px rgba(136, 198, 253, 0.19)",
     secondary: "7px 13px 14px rgba(116, 177, 232, 0.24)",
   },
