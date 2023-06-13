@@ -5,10 +5,14 @@ import MovieList from "../MovieList/MovieList";
 import Pagination from "../Pagination/Pagination";
 import Loader from "../Loader/Loader";
 
-import { getTrendingMovies } from "../../shared/api/movies/movies";
+import {
+  getTrendingMovies,
+  combineGenres,
+} from "../../shared/api/movies/movies";
 
 const Movies = () => {
   const [items, setItems] = useState([]);
+  const [genres, setGenres] = useState([]);
   const [language, setLanguage] = useState("en-US"); // "uk-UA"
   const [totalPages, setTotalPages] = useState(0);
   const [loading, setLoading] = useState(false);
@@ -26,6 +30,8 @@ const Movies = () => {
           page,
           language
         );
+        const genres = await combineGenres();
+        setGenres(genres);
         setItems(results);
         setTotalPages(total_pages);
       } catch (error) {
@@ -55,7 +61,7 @@ const Movies = () => {
     <>
       {loading && <Loader />}
       {error && <p>Oops. Something goes wrong. Try again later.</p>}
-      <MovieList items={items} />
+      <MovieList items={items} genres={genres} />
       <Pagination
         currentPage={Number(page)}
         totalPagesCount={totalPages}

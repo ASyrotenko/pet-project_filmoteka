@@ -20,7 +20,34 @@ export const getTrendingMovies = async (page, language) => {
   return data;
 };
 
-export const getMovieGenres = async () => {
-  const data = await instance.get("/genre/movie/list");
-  return data;
+const getMovieGenres = async () => {
+  const {
+    data: { genres },
+  } = await instance.get("/genre/movie/list");
+  return genres.reduce((acc, currentValue) => {
+    acc[currentValue.id] = currentValue.name;
+
+    return acc;
+  }, {});
 };
+
+const getTVGenres = async () => {
+  const {
+    data: { genres },
+  } = await instance.get("/genre/tv/list");
+  return genres.reduce((acc, currentValue) => {
+    acc[currentValue.id] = currentValue.name;
+
+    return acc;
+  }, {});
+};
+
+export async function combineGenres() {
+  const movieGenres = await getMovieGenres();
+  // console.log("movieGenres", movieGenres);
+  const tvGenres = await getTVGenres();
+  // console.log("tvGenres", tvGenres);
+  const genres = { ...movieGenres, ...tvGenres };
+  // console.log("genres", genres);
+  return genres;
+}

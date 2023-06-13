@@ -1,1 +1,2 @@
 Skeleton
+Hide API_KEY

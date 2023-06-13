@@ -1,23 +1,17 @@
 import { Link, useLocation } from "react-router-dom";
 
-import {
-  List,
-  Poster,
-  Title,
-  Genres,
-  Splash,
-  Year,
-  Vote,
-} from "./movieList.styled";
+import GenreList from "../GenreList/GenreList";
+
+import { List, Poster, Title, Splash, Year, Vote } from "./movieList.styled";
 
 import { getFullYearFromDate } from "../../shared/helpers";
 import defaultMoviePoster from "../../images/movies/default-movie-poster.jpg";
 
-const MovieList = ({ items }) => {
+const MovieList = ({ items, genres }) => {
   const location = useLocation();
 
   const elements = items.map(
-    ({ id, poster_path, title, release_date, vote_average }) => (
+    ({ id, poster_path, title, release_date, vote_average, genre_ids }) => (
       <li key={id}>
         <Link state={{ from: location }} to={`/movies/${id}`}>
           <Poster
@@ -32,7 +26,7 @@ const MovieList = ({ items }) => {
             height="auto"
           />
           <Title>{title}</Title>
-          <Genres>Genres</Genres>
+          <GenreList genre_ids={genre_ids} genres={genres} />
           <Splash> | </Splash>
           <Year>{getFullYearFromDate(release_date)}</Year>
           <Vote>{vote_average.toFixed(1)}</Vote>

@@ -19,11 +19,6 @@ const Title = styled.p`
   color: ${({ theme }) => theme.colors.textPrimary};
 `;
 
-const Genres = styled.p`
-  display: inline;
-  line-height: 1.33;
-  color: ${({ theme }) => theme.colors.textAccent};
-`;
 const Splash = styled.span`
   display: inline;
   line-height: 1.33;
@@ -48,4 +43,4 @@ const Vote = styled.p`
   background-color: ${({ theme }) => theme.colors.backgroundAccent};
 `;
 
-export { List, Poster, Title, Genres, Splash, Year, Vote };
+export { List, Poster, Title, Splash, Year, Vote };

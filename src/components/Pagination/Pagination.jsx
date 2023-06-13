@@ -37,7 +37,6 @@ const Pagination = ({
   };
 
   const lastPage = paginationRange[paginationRange.length - 1];
-  console.log(currentPage === 1);
   return (
     <PaginationContainer>
       <PaginationList>
@@ -57,7 +56,6 @@ const Pagination = ({
         )}
         {paginationRange.map((pageNumber) => {
           if (pageNumber === DOTS) {
-            console.log("DOTS: ", pageNumber);
             return viewportWidth < 400 || currentPage === 1 ? (
               ""
             ) : (
@@ -68,7 +66,6 @@ const Pagination = ({
               </li>
             );
           }
-          console.log("pageNumber: ", pageNumber);
 
           return (
             <li key={pageNumber}>
