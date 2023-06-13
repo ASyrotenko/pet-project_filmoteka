@@ -27,6 +27,7 @@ const MovieList = ({ items }) => {
                 : defaultMoviePoster
             }
             alt={title}
+            loading="lazy"
             width="420"
             height="auto"
           />

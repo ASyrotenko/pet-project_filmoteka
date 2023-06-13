@@ -28,6 +28,8 @@ export const theme = {
     textWhite: "#FFFFFF",
     textAccent: "#FF6B08",
     backgroundAccent: "#FF6B08",
+    loadingColor: "#FF6B08",
+    loadingSecondaryColor: "#FF6B0870",
   },
   boxShadows: {
     buttonActive: "0px 8px 43px rgba(255, 107, 1, 0.6)",
