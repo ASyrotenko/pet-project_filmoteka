@@ -44,10 +44,7 @@ const getTVGenres = async () => {
 
 export async function combineGenres() {
   const movieGenres = await getMovieGenres();
-  // console.log("movieGenres", movieGenres);
   const tvGenres = await getTVGenres();
-  // console.log("tvGenres", tvGenres);
   const genres = { ...movieGenres, ...tvGenres };
-  // console.log("genres", genres);
   return genres;
 }

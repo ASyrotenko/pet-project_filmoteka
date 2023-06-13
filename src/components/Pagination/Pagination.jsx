@@ -56,7 +56,7 @@ const Pagination = ({
         )}
         {paginationRange.map((pageNumber) => {
           if (pageNumber === DOTS) {
-            return viewportWidth < 400 || currentPage === 1 ? (
+            return viewportWidth < 400 ? (
               ""
             ) : (
               <li key={nanoid()}>
