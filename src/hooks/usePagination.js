@@ -48,7 +48,13 @@ export const usePagination = ({
     }
 
     if (shouldShowLeftDots && shouldShowRightDots) {
-      const middleRange = range(leftSiblingIndex, rightSiblingIndex);
+      const middleRange =
+        viewportWidth < 767
+          ? range(leftSiblingIndex, rightSiblingIndex)
+          : range(
+              leftSiblingIndex - siblingCount,
+              rightSiblingIndex + siblingCount
+            );
       return [firstPageIndex, DOTS, ...middleRange, DOTS, lastPageIndex];
     }
   }, [siblingCount, totalPagesCount, currentPage, viewportWidth]);

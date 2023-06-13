@@ -42,7 +42,7 @@ const Movies = () => {
     };
 
     fetchAPI();
-  }, [page, language]);
+  }, [page, language, setLanguage]);
 
   const onPageChange = (currentPage) => {
     if (page === currentPage) {
