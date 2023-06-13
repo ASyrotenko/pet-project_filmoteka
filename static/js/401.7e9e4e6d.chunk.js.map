@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/401.7e9e4e6d.chunk.js","mappings":"sJAIA,UAJsB,WACpB,OAAOA,EAAAA,EAAAA,KAAA,OAAAC,SAAK,iBACd,C","sources":["pages/MyLibraryPage/MyLibraryPage.jsx"],"sourcesContent":["const MyLibraryPage = () => {\n  return <div>MyLibraryPage</div>;\n};\n\nexport default MyLibraryPage;\n"],"names":["_jsx","children"],"sourceRoot":""}
