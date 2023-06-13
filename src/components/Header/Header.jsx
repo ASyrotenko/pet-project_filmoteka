@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { theme } from "../../theme/theme";
 
@@ -22,6 +22,14 @@ const Header = () => {
   const { pathname } = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const [screenWidth] = useWindowSize();
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isOpen]);
 
   const onSubmit = (e) => {
     e.preventDefault();

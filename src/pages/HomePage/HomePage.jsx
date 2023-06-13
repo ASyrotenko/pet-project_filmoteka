@@ -1,5 +1,7 @@
+import Movies from "../../components/Movies/Movies";
+
 const HomePage = () => {
-  return <>HomePage</>;
+  return <Movies />;
 };
 
 export default HomePage;

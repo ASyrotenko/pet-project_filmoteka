@@ -65,6 +65,7 @@ const HeaderWrap = styled.div`
 
 const HeaderLogoLink = styled(Link)`
   display: flex;
+  z-index: 50;
   color: ${({ theme }) => theme.colors.headerText};
   align-items: center;
   transition: color ${({ theme }) => theme.transition.duration}
@@ -83,7 +84,6 @@ const HeaderLogoLink = styled(Link)`
 `;
 
 const HeaderLogoIcon = styled(Logo)`
-  z-index: 50;
   stroke: currentColor;
 
   @media screen and (min-width: ${({ theme }) =>
@@ -110,7 +110,8 @@ const HeaderMenu = styled.div`
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    overflow: hidden;
     background-color: ${({ theme }) => theme.colors.headerBurgerMenuBackground};
     transform: translateY(-100%);
     visibility: hidden;
@@ -119,7 +120,7 @@ const HeaderMenu = styled.div`
       ${({ theme }) => theme.transition.timingFunction};
 
     ${({ isOpen }) =>
-      isOpen && "visibility: visible; opacity: 1; transform: translateY(0)"}
+      isOpen && "visibility: visible; opacity: 1; transform: translateY(0);"}
   }
 `;
 

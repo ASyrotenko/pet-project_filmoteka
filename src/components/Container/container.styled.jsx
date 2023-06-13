@@ -5,7 +5,8 @@ const Wrapper = styled.div`
 
   padding: 0 ${({ theme }) => theme.breakpoints.mobile.padding}px;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.tablet.width - 1}px) {
     min-width: ${({ theme }) => theme.breakpoints.mobile.width}px;
   }
 
