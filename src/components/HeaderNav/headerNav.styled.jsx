@@ -28,14 +28,6 @@ const Item = styled.li`
   }
 `;
 
-// &:not(:last-child) {
-//     margin-right: 40px;
-//   }
-
-//   &:nth-last-child(3) {
-//     margin-right: 0px;
-//   }
-
 const LinkNav = styled(NavLink)`
   position: relative;
   padding: 10px 0;

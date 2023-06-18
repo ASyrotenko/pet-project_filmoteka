@@ -5,6 +5,7 @@ export const theme = {
     desktop: { width: 1280, padding: 32 },
     burgerMenu: { width: 420 },
     logoText: { width: 580 },
+    posterMobile: { width: 480 },
   },
 
   fonts: {

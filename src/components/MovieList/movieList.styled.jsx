@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import styled from "styled-components";
 
 const List = styled.ul`
@@ -6,10 +8,31 @@ const List = styled.ul`
   align-items: center;
   gap: 20px;
   padding: 20px 0;
+
+  @media screen and (min-width: ${({ theme }) =>
+      theme.breakpoints.tablet.width}px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+`;
+
+const Item = styled.li`
+  display: flex;
+  flex-basis: calc((100% - 32px) / 2);
+`;
+
+const LinTo = styled(Link)`
+  margin: 0 auto;
 `;
 
 const Poster = styled.img`
   border-radius: 5px;
+  @media screen and (min-width: ${({ theme }) =>
+      theme.breakpoints.posterMobile.width}px) and (max-width: ${({ theme }) =>
+      theme.breakpoints.tablet.width - 1}px) {
+    width: 440px;
+  }
 `;
 
 const Title = styled.p`
@@ -43,4 +66,4 @@ const Vote = styled.p`
   background-color: ${({ theme }) => theme.colors.backgroundAccent};
 `;
 
-export { List, Poster, Title, Splash, Year, Vote };
+export { List, Item, LinTo, Poster, Title, Splash, Year, Vote };

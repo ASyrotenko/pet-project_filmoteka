@@ -10,6 +10,16 @@ const PaginationList = styled.ul`
   margin: 0 auto;
   justify-content: space-between;
   max-width: 420px;
+
+  @media screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.tablet.width - 1}px) {
+    max-width: 420px;
+  }
+
+  @media screen and (min-width: ${({ theme }) =>
+      theme.breakpoints.tablet.width}px) {
+    width: 374px;
+  }
 `;
 
 const PaginationButton = styled.button`

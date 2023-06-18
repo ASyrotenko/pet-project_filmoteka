@@ -3,7 +3,7 @@ import { useSearchParams } from "react-router-dom";
 
 import MovieList from "../MovieList/MovieList";
 import Pagination from "../Pagination/Pagination";
-import Loader from "../Loader/Loader";
+import Loader from "../HeaderSearch/Loader/Loader";
 
 import {
   getTrendingMovies,
